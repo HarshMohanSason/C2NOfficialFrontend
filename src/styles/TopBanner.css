@@ -1,0 +1,11 @@
+.top-banner{
+    background-color: black;
+    height: 38px;
+    color: white;
+    text-align: center
+}
+.top-banner p{
+    font-size: 13.67px;
+    font-weight: 600;
+    padding: 8px;
+}
