@@ -22,7 +22,7 @@ function App() {
             <p>Discover top-quality products at unbeatable prices. We bring you the best without breaking the bank!</p>
             <button type="button">SHOP NOW  <FontAwesomeIcon icon={faArrowRight} style={{ marginLeft: '3px' }} /></button>           
           </div>
-          <img src={firstSectionImage}></img>
+          <img src={firstSectionImage} alt=""></img>
         </div>
         <div className="second-section">
           <div className="left-area">
@@ -33,19 +33,19 @@ function App() {
           <div className="right-area">
             <div className="image-tile">
               <div className="image-wrapper">
-                <img src= {secondSectionImage1}></img>
+                <img src= {secondSectionImage1} alt=""></img>
                 <h3>CLASSIC HOODIE</h3>
                 <p>Stay cozy and stylish with premium hoodie. Made from ultra-soft cotton fleece, perfect for layering and everyday wear.</p>
                 <p>$30</p>
               </div>
               <div className="image-wrapper">
-                <img src= {secondSectionImage2}></img>
+                <img src= {secondSectionImage2} alt=""></img>
                 <h3>CLASSIC HOODIE</h3>
                 <p>Stay cozy and stylish with premium hoodie. Made from ultra-soft cotton fleece, perfect for layering and everyday wear.</p>
                 <p>$30</p>
               </div>
               <div className="image-wrapper">
-                <img src= {secondSectionImage3}></img>
+                <img src= {secondSectionImage3} alt=""></img>
                 <h3>CLASSIC HOODIE</h3>
                 <p>Stay cozy and stylish with premium hoodie. Made from ultra-soft cotton fleece, perfect for layering and everyday wear.</p>
                 <p>$30</p>
@@ -59,7 +59,7 @@ function App() {
         </div>
         <div className="fourth-section">
           <div className="left-area">
-          <img src={fourthSectionImage}></img>
+          <img src={fourthSectionImage} alt=""></img>
           </div>
           <div className="right-area">
             <h2>ABOUT US - WHY CHOOSE C2N?</h2>
