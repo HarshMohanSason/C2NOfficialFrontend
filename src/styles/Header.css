@@ -1,33 +1,31 @@
 .header {
-  background-color:#E2E2E2;
-  height: 89px;
-}
-.top-row{
-  height: 100%;
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  padding: 0 60px;
+  background-color:#E2E2E2;
+  height: 89px;
+  padding: 0, 100px;
 }
-.heading-text{
+.header .left-menu-section nav ul {
+  max-width: 622px;
+  display: flex;
+  padding-top: 30px;
+  padding-left: 50px;
+  gap: 20px;
+}
+.header .brand-section .heading-text{
+  width: auto;
   height: 100%;
   font-family: 'Anton';
   font-size: 43px;
-  padding-top: 12px;
-  padding-right: 130px;
   box-sizing: border-box;
+  padding-top: 6px;
+  padding-right: 135px;
 }
-.left-menu ul{
-  font-size: 16px;
-  font-weight: 600;
+.header .right-menu-section nav ul {
+  justify-content: end;
+  max-width: 622px;
   display: flex;
+  padding-top: 30px;
+  padding-right: 50px;
   gap: 20px;
-  list-style: none;
-}
-.right-menu ul{
-  font-size: 16px;
-  font-weight: 600;
-  display: flex;
-  gap: 20px;
-  list-style: none;
 }
