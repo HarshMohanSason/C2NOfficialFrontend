@@ -3,9 +3,9 @@ import '../styles/TopBanner.css'
 
 function TopBanner() {
     return(
-    <div className="top-banner">
+    <section className="top-banner">
         <p>PRE-ORDER NOW</p>
-    </div>
+    </section>
     );
 }
 export default TopBanner;

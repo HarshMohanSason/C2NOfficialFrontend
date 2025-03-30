@@ -17,7 +17,7 @@
     align-self: center;
     width: 464px;
 }
-.first-section .text button, .second-section .left-area button{
+.first-section .text button, .second-section .left-area button, .sixth-section .right-area button, .seventh-section .left-area button{
     background-color: #F6F6F6;
     border-radius: 10px;
     width: 179px;
@@ -89,6 +89,7 @@
     margin-bottom: 10px;
 }
 .second-section .right-area .image-tile .image-wrapper p{
+    font-style: italic;
     font-size: 14px;
     font-weight: 300;
     margin-top: 10px;
@@ -127,7 +128,10 @@
     display: block;
 }
 .fourth-section .right-area{
-    padding: 150px;
+    padding: 0 150px;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
     display: flex;
     gap: 20px;
     flex-direction: column;
@@ -163,18 +167,81 @@
    font-size: 14.63px;
 }
 .fifth-section-newsletter input{
-    width: 350px;
+    font-size: 19.94px; 
+    width: 320px;
     height: 52.59px;
     color: white;
     background-color: transparent;
     border-radius: 10px;
     border: 2px solid #fff;
+    padding-left: 20px;
 }
 .fifth-section-newsletter input::placeholder {
     color: grey; 
     font-size: 19.94px; 
 }
-
+.fifth-section-newsletter input:focus {
+    outline: none;
+    box-shadow: none;
+    border-color: white;
+}
+.sixth-section{
+    background-color: #E2E2E2;
+    height: 720px;
+    display: flex;
+    border-bottom: 3px solid #000;
+}
+.sixth-section img{
+    height: 100%;
+    display: block;
+    min-width: 720px;
+    max-width: 720px;
+}
+.sixth-section .right-area{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    justify-content: center;
+    transform: translateX(15%);
+}
+.sixth-section .right-area h2{
+    font-size: 33.1px;
+}
+.sixth-section .right-area p{
+    max-width: 50%;
+    font-size: 16.45px;
+    font-weight: 300;
+}
+.seventh-section {
+    display: flex;
+    height: 720px;
+    border-bottom: 3px solid #000;
+    background-color: #E2E2E2;
+}
+.seventh-section img{
+    height: 100%;
+    width: 100%;
+    display: block;
+}
+.seventh-section .left-area{
+    min-width: 720px;
+    max-width: 720px;
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    transform: translateX(15%);
+    gap: 30px;
+}
+.seventh-section .left-area p{
+    font-size: 16.31;
+    font-family: 300;
+    max-width: 50%;
+}
+.seventh-section .left-area h2{
+    font-size: 33.1px;
+    text-align: left;
+}
 
 
 
