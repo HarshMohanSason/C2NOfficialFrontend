@@ -1,9 +1,13 @@
+
 *{
     font-family: 'Inter';
     margin: 0;
     padding: 0;
     overflow-x: hidden;
+    scrollbar-color: #FF3D22 #E2E2E2; /* moving bar  | background of the bar */
+    scrollbar-width: thick; 
 }
+
 .first-section{
     width: 100vw;
     height: 722.53px;
