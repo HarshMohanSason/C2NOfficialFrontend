@@ -250,6 +250,12 @@
     font-size: 33.1px;
     text-align: left;
 }
+.login-section h4{
+    text-align: center;
+}
+.login-section h4 span link{
+    text-decoration: none;
+}
 
 
 
