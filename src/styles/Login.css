@@ -1,0 +1,31 @@
+.login-page{
+	background-color: #E2E2E2;
+	display: flex;
+	justify-content: space-between;
+	font-family: 'Inter';
+}
+.login-section{
+	display: flex;
+	flex-direction: column;
+	padding-left: 80px;
+	padding-top: 100px;
+	gap: 20px;
+}
+.login-section h2{
+	font-size: 32px;
+}
+.login-section input{
+	border-radius: 10px;
+
+}
+.login-section button{
+	background-color: #FF3D22;
+	border-radius: 10px;
+	color: white;
+	width: 404px;
+	height: 32px;
+}
+.image-section img{
+	size: 50;
+}
+

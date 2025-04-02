@@ -1,0 +1,35 @@
+.drop-down-menu{
+	width: 50%;
+	height: 727px;
+	position: absolute;
+	background: black;
+	font-size: 32px;
+	opacity: 0;
+	left : 0;
+	top: 128px;
+	visibility: hidden;
+	transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+}
+.drop-down-menu h6{
+	font-weight: 300;
+	font-size: 16.31px;
+	padding-top: 50px;
+	padding-left: 50px;
+	color: white;
+}
+
+.drop-down-menu ul{
+	padding-left: 50px;
+	display: flex;
+	flex-direction: column;
+	gap: 15px;
+	padding-top: 30px;
+}
+.drop-down-menu ul li a{
+	text-decoration: none;
+	color: white;
+	transition: color 0.3s ease-in-out;
+}
+.drop-down-menu ul li a:\hover{
+ 	color: #FF3D22;
+}

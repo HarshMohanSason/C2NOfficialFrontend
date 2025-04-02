@@ -12,6 +12,14 @@
   padding-left: 50px;
   gap: 20px;
 }
+.menu-down-arrow-icon:hover + .drop-down-menu, .drop-down-menu:hover {
+    opacity: 1;
+    visibility: visible;
+}
+.menu-down-arrow-icon:hover {
+    transform: scale(1.3);
+    transition: transform 0.3s ease-in-out;
+}
 .header .brand-section .heading-text{
   width: auto;
   height: 100%;
@@ -19,13 +27,19 @@
   font-size: 43px;
   box-sizing: border-box;
   padding-top: 6px;
-  padding-right: 135px;
+  padding-right: 80px;
 }
 .header .right-menu-section nav ul {
   justify-content: end;
-  max-width: 622px;
+  width: 180px;
   display: flex;
   padding-top: 30px;
   padding-right: 50px;
   gap: 20px;
 }
+.header .right-menu-section nav ul li a{
+  text-decoration: none;
+  color: black;
+}
+
+
