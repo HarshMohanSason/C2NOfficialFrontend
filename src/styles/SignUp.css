@@ -1,21 +1,26 @@
-.login-page{
+.sign-up-page{
 	background-color: #E2E2E2;
 	display: flex;
 	justify-content: space-between;
 	font-family: 'Inter';
 }
-.login-section{
+.sign-up-section{
 	display: flex;
 	flex-direction: column;
-	padding-left: 200px;
+	padding-left: 150px;
 	padding-top: 150px;
 	gap: 20px;
 }
-.login-section h2{
+.sign-up-section h2{
 	font-size: 32px;
-	padding-bottom: 60px;
 }
-.login-section input{
+.sign-up-with-email-section {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.sign-up-section input{
 	border-radius: 10px;
 	font-size: 20px;
 	height: 40px;
@@ -23,10 +28,10 @@
 	outline: none;
 	border: 1px solid #E2E2E2;
 }
-.login-section input:focus {
+.sign-up-section input:focus {
   border-color: #FF3D22; 
 }
-.login-section input::placeholder{
+.sign-up-section input::placeholder{
 	color: #E2E2E2;
 	font-size: 12px;
 }
@@ -37,10 +42,13 @@
 .terms-and-conditions label{
 	padding-top: 11px;
 }
-.login-section label{
+.sign-up-section label{
 	margin: 0;
 	font-weight: 500;
 	font-size: 15px;
+}
+.sign-up-section input[type="checkbox"] {
+  accent-color: #FF3D22; 
 }
 #sign-up-button{
 	background-color: #FF3D22;
@@ -74,7 +82,7 @@
     width: 250px;
     padding: 12px 16px 12px 42px;
     border: none;
-    border-radius: 3px;
+    border-radius: 10px;
     box-shadow: 0 -1px 0 rgba(0, 0, 0, .04), 0 1px 1px rgba(0, 0, 0, .25);
     
     color: #757575;
@@ -109,10 +117,10 @@
     box-shadow: 0 -1px 0 rgba(0, 0, 0, .04), 0 1px 1px rgba(0, 0, 0, .25);
     cursor: not-allowed;
 }
-.login-section h4{
+.sign-up-section h4{
     text-align: center;
     font-family: 500;
 }
-.login-section h4 span link{
+.sign-up-section h4 span link{
     text-decoration: none;
 }
