@@ -12,6 +12,7 @@ import sixthSectionImage from "../assets/images/sixth_section_image.jpg";
 import seventhSectionImage from "../assets/images/seventh_section_image.jpg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
+import CookiesPopup from "../utilities/CookiesPopup.js";
 
 function Home() {
   return (
@@ -217,8 +218,9 @@ function Home() {
           </article>
           <img src={seventhSectionImage} alt="Review Section Image"></img>
         </section>
+        <CookiesPopup />
       </main>
-      <Footer />
+      <Footer/>
     </>
   );
 }

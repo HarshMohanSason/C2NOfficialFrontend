@@ -14,7 +14,7 @@ function SignUp() {
     agree: false,
     auth_type: "email",
   });
-  const navigate = useNavigate()
+  const navigate = useNavigate();
   const handleFormData = (event) => {
     const { id, value, type, checked } = event.target;
 
@@ -37,12 +37,12 @@ function SignUp() {
       ) {
         CustomAlert({
           title: "Oops!",
-          text: "Email already exists. Please use a different one.",
+          text: "One or more fields is empty",
         });
         return;
       }
-      //Sending the data to the backend server
-      const response = await fetch("http://localhost:8080/signup", {
+      //Sending the data to the backend server 
+      const response = await fetch(process.env.REACT_APP_SIGN_UP_URL, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -53,6 +53,7 @@ function SignUp() {
       switch (response.status) {
         case 200:
         case 201: {
+          navigate('/');
           return;
         }
         case 400:
@@ -73,7 +74,6 @@ function SignUp() {
           return;
         }
       }
-      navigate('/')
     } catch (e) {
       CustomAlert({
         title: "Error!",
@@ -138,7 +138,7 @@ function SignUp() {
         <ContinueWithGoogleButton />
         <h4>
           Have an account?{" "}
-          <Link to="" style={{ textDecoration: "none", color: "#FF3D22" }}>
+          <Link to="/signIn" style={{ textDecoration: "none", color: "#FF3D22" }}>
             Sign in
           </Link>
         </h4>

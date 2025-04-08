@@ -18,9 +18,9 @@ const ContinueWithGoogleButton = () => {
         );
         //Get the user profile first 
         const profile = await res.json();
-        // ✅ Send profile to your backend
+        
         const backendRes = await fetch(
-          "http://localhost:8080/signup",
+          process.env.REACT_APP_SIGN_UP_URL,
           {
             method: "POST",
             headers: {
@@ -29,7 +29,7 @@ const ContinueWithGoogleButton = () => {
             body: JSON.stringify({
               name: profile.name,
               email: profile.email,
-              authType: "google",
+              auth_type: "google",
               password: null
             }),
           }
