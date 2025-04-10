@@ -135,7 +135,7 @@ function SignUp() {
         </form>
 
         <div className="or-divider">Or</div>
-        <ContinueWithGoogleButton />
+        <ContinueWithGoogleButton isSignUp={true} />
         <h4>
           Have an account?{" "}
           <Link to="/signIn" style={{ textDecoration: "none", color: "#FF3D22" }}>

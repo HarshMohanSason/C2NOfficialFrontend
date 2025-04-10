@@ -73,7 +73,7 @@ function SignIn(){
       <section className="sign-in-section">
         <h1>Welcome Back!</h1>
         <h6>Enter your current credentials to login</h6>
-        <form >
+        <form onSubmit={submitSignUpWithEmailForm}>
           <section className="sign-in-with-email-section">
             <label htmlFor="email">Email Address</label>
             <input
@@ -101,7 +101,7 @@ function SignIn(){
         </form>
 
         <div className="or-divider">Or</div>
-        <ContinueWithGoogleButton />
+        <ContinueWithGoogleButton isSignUp={false} /> 
         <h4>Don’t have an account?{" "}
           <Link to="/signUp"style={{ textDecoration: "none", color: "#FF3D22" }}>
             Sign Up

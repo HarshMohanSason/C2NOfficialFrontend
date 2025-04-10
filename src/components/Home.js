@@ -1,4 +1,4 @@
-import React from "react";
+import {React, useEffect, useState } from "react";
 import Header from "./Header.js";
 import Footer from "./Footer.js";
 import TopBanner from "./TopBanner.js";
@@ -13,10 +13,12 @@ import seventhSectionImage from "../assets/images/seventh_section_image.jpg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import CookiesPopup from "../utilities/CookiesPopup.js";
+import InitialLoadingScreen from './InitialLoadingScreen.js'
 
 function Home() {
   return (
     <>
+      <InitialLoadingScreen />
       <TopBanner />
       <Header />
       <main>

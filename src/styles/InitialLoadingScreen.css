@@ -1,0 +1,54 @@
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  z-index: 9999;
+  pointer-events: none;
+}
+
+.box {
+  flex: 1;
+  position: relative;
+  overflow: hidden;
+}
+
+.box-top,
+.box-bottom {
+  position: absolute;
+  width: 100%;
+  height: 50%;
+  background-color: #FF3D22;
+  transition: transform 1s ease-in-out;
+}
+
+.box-top {
+  top: 0;
+  transform: translateY(0);
+}
+
+.box-bottom {
+  bottom: 0;
+  transform: translateY(0);
+}
+
+/* Animation when 'animate' class is added */
+.animate .box-top {
+  animation: slideUp 1s forwards;
+}
+
+.animate .box-bottom {
+  animation: slideDown 1s forwards;
+}
+
+@keyframes slideUp {
+  to {
+    transform: translateY(-100%);
+  }
+}
+
+@keyframes slideDown {
+  to {
+    transform: translateY(100%);
+  }
+}

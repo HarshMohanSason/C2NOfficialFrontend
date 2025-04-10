@@ -29,7 +29,7 @@ function Header() {
             <ul>
               <li><Link to="">Search</Link></li>
               <li><Link to="/">Cart</Link></li>
-              <li><Link to="/signIn">Login</Link></li>
+              <li><Link to="/signIn">Account</Link></li>
             </ul>
           </nav>
         </section>

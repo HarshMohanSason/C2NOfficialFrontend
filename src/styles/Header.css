@@ -31,7 +31,7 @@
 }
 .header .right-menu-section nav ul {
   justify-content: end;
-  width: 180px;
+  width: auto;
   display: flex;
   padding-top: 30px;
   padding-right: 50px;
