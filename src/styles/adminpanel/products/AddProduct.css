@@ -1,0 +1,233 @@
+.add-product-page{
+  background-color: #E2E2E2;
+  height: 100vh;
+  width: 100vw;
+}
+.add-product-section h1{
+  font-size: 45px;
+  margin-bottom: 20px;
+}
+.add-product-section{
+  max-width: 1000px;
+  margin: 50px auto 0 auto;
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+.product-name-section label, .product-long-description-section label, .product-short-description-section label, .slug-section label{
+  display: block;
+  padding-bottom: 10px;
+}
+.product-name-section input{
+  width: 100%;
+  border-radius: 5px;
+  box-sizing: border-box;
+  height: 60px;
+  padding-left: 20px;
+  font-size: 18px;
+  outline: none;
+  border: none;
+}
+.product-long-description-section .ql-editor.ql-blank::before {
+  font-style: normal !important;       
+}
+.product-long-description-section .ql-editor{
+  font-family: 'Inter';
+  border-radius: 5px;
+  background-color: white;
+  font-family: 'Inter';
+  font-size: 18px;
+  min-height: 400px;
+}
+.product-long-description-section .ql-toolbar{
+  border-radius: 5px;
+}
+.product-short-description-section .ql-editor.ql-blank::before {
+  font-style: normal !important;       
+}
+.product-short-description-section .ql-editor{
+  font-family: 'Inter';
+  border-radius: 5px;
+  background-color: white;
+  font-family: 'Inter';
+  font-size: 18px;
+  min-height: 150px;
+}
+.upload-thumbnail-image-section{
+  align-self: center;
+  background-color: white;
+  height: 400px;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 10px;
+  width: 100%;
+  gap: 20px;
+}
+.upload-thumbnail-image-section h4{
+  font-size: clamp(25px, 3.5vh, 40px);
+  text-align: center;
+  font-weight: 200;
+}
+.upload-thumbnail-image-section img{
+  padding-top: 20px;
+  max-width: 90%;
+  max-height: 90%;
+}
+.upload-thumbnail-image-section button{
+    background-color: #FF3D22;
+    border: none;
+    color: white;
+    width: 160px;
+    height: 60px;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+}
+.upload-carousel-images-section{
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  border-radius: 10px;
+  gap: 30px;
+}
+.slug-section input{
+  width: 100%;
+  border-radius: 5px;
+  box-sizing: border-box;
+  height: 60px;
+  padding-left: 20px;
+  font-size: 18px;
+  outline: none;
+  border: none;
+}
+.product-data-submit-button{
+  background-color: #FF3D22;
+  border: none;
+  color: white;
+  width: 160px;
+  height: 60px;
+  border-radius: 10px;
+  font-size: 16px;
+  cursor: pointer;
+}
+.pricing-section{
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  padding-left: 50px;
+  width: 100%;
+  border-radius: 5px;
+  background-color: white;
+}
+.price-input-section, .discount-input-section{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 50%;
+}
+.price-input-div, .discount-input-div{
+  padding-left: 10px;
+  border: 1px solid black;
+  align-items: center;
+  display: flex;
+  width: 50%;
+  background-color: white;
+  height: 40px;
+  border-radius: 5px;
+}
+.price-input-div .rupee-logo{
+  font-size: 16px;
+}
+.price-input-div input, .discount-input-div input{
+  font-size: 14px;
+  padding-left: 10px;
+  border: none;
+  outline: none;
+  height: 100%;
+  width: 100%;
+}
+.inventory-section{
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  padding-left: 50px;
+  width: 100%;
+  border-radius: 5px;
+  background-color: white;
+}
+.total-inventory-input-section, .sku-input-section{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 50%;
+}
+.total-inventory-input-section input, .sku-input-section input{
+  width: 50%;
+  height: 40px;
+  padding-left: 10px;
+  border: 1px solid black;
+  outline: none;
+  border-radius: 5px;
+}
+.stock-status-section{
+  background-color: white;
+  display: flex;
+  align-items: center;
+  border-radius: 5px;
+  box-sizing: border-box;
+  padding-left: 50px;
+  height: 70px;
+}
+.stock-status-section label{
+  padding-right: 10px;
+}
+.stock-status-section select{
+  font-family: 'Inter';
+  font-size: 14px;
+  padding-left: 5px;
+  border-radius: 8px;
+  height: 30px;
+  width: 110px;
+  color: black;
+  outline: none;
+  background-color: #E2E2E2;
+  border: 1px solid #B9B9B9;
+}
+.shipping-details-section{
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  padding-left: 50px;
+  width: 100%;
+  border-radius: 5px;
+  background-color: white;
+}
+.weight-info-section, .dimension-info-section{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  width: 50%;
+}
+.weight-info-section input, .dimension-info-section input{
+  width: 50%;
+  height: 40px;
+  padding-left: 10px;
+  border: 1px solid black;
+  outline: none;
+  border-radius: 5px;
+}

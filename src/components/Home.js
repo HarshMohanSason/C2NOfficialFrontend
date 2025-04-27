@@ -16,11 +16,38 @@ import CookiesPopup from "../utilities/CookiesPopup.js";
 import InitialLoadingScreen from './InitialLoadingScreen.js'
 
 function Home() {
+  //Always assuming that user is not logged in 
+  const [isLoggedIn, setIsLogInInfo] = useState(false) 
+  useEffect(() => {
+    const checkLoginStatus = async () => {
+      try{
+        const response = await fetch(process.env.REACT_APP_RETURN_USER, {
+          method: 'GET',
+          credentials: 'include', //include the cookies
+          headers: {
+            "Content-Type": "application/json",
+          },
+        })
+        if (response.ok) {
+          setIsLogInInfo(true)
+        }else{
+
+          setIsLogInInfo(false)
+        }
+      }
+      catch (err){
+        console.log(err)
+        setIsLogInInfo(false)
+      }
+    }
+    checkLoginStatus();
+  }, []);
+
   return (
     <>
       <InitialLoadingScreen />
       <TopBanner />
-      <Header />
+      <Header isLoggedIn={isLoggedIn}/>
       <main>
         <section className="first-section">
           <article className="text">
@@ -161,7 +188,7 @@ function Home() {
               <form>
                 <input
                   type="text"
-                  class="newletter"
+                  className="newletter"
                   placeholder="EMAIL ADDRESS"
                 />
               </form>
@@ -170,7 +197,7 @@ function Home() {
         </section>
 
         <section className="sixth-section">
-          <img src={sixthSectionImage}></img>
+          <img src={sixthSectionImage} alt=""></img>
           <article className="right-area">
             <h2>CLASSIC HOODIE </h2>
             <p>
@@ -218,7 +245,7 @@ function Home() {
               />
             </button>
           </article>
-          <img src={seventhSectionImage} alt="Review Section Image"></img>
+          <img src={seventhSectionImage} alt=""></img>
         </section>
         <CookiesPopup />
       </main>

@@ -16,7 +16,6 @@ function SignIn(){
   const navigate = useNavigate();
   const handleFormData = (event) => {
     const { name, value } = event.target;
-
     setFormData((newValue) => ({
       ...newValue,
       [name]: value,
@@ -27,7 +26,8 @@ function SignIn(){
     event.preventDefault();
     try{
       const response = await fetch(process.env.REACT_APP_SIGN_IN_URL, {
-          method: "POST", 
+          method: "POST",
+          credentials: "include", 
           headers: {
           "Content-Type": "application/json",
           },
@@ -48,7 +48,7 @@ function SignIn(){
           title: "Oops!",
           text: error,
           });
-        return;
+          return;
         }
         default:{
           CustomAlert({

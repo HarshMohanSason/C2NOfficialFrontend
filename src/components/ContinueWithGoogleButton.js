@@ -47,7 +47,7 @@ const ContinueWithGoogleButton = ({isSignUp}) => {
           case 404: 
           case 409: 
           case 500: {
-            const error = 
+            const error = await backendRes.text();
             CustomAlert({
             title: "Oops!",
             text: error,
@@ -70,15 +70,17 @@ const ContinueWithGoogleButton = ({isSignUp}) => {
       }
     },
     onError: () => {
-      console.log("Login Failed");
+       CustomAlert({
+          title: "Error!",
+          text: `Login failed. Please try again.`,
+          });
     },
   });
   return (
     <button
       onClick={() => login()}
       type="button"
-      className="google-sign-in-button"
-    >
+      className="google-sign-in-button">
       Continue with Google
     </button>
   );

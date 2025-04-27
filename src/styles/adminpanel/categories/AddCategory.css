@@ -1,0 +1,77 @@
+.add-category-page{
+  background-color: #E2E2E2;
+  width: 100vw;
+  height: 100vh;
+  padding-bottom: 20px;
+}
+.add-category-page h1{
+  font-size: 45px;
+  margin-bottom: 20px;
+}
+.add-category-section{
+  max-width: 1000px;
+  margin: 50px auto 0 auto;
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+.add-category-name-section label, .upload-size-reference-image label{
+  display: block;
+  padding-bottom: 10px;
+}
+.add-category-name-section input{
+  width: 100%;
+  border-radius: 5px;
+  box-sizing: border-box;
+  height: 60px;
+  padding-left: 20px;
+  font-size: 18px;
+  outline: none;
+  border: none;
+}
+.chart-category-input-table{
+	width: 100%;
+	height: 400px;
+	overflow-x: auto;
+}
+.chart-category-input-table input[type="text"]{
+	padding-left: 10px;
+	height: 30px;
+}
+.chart-category-input-table input[type="button"]{
+	padding: 10px;
+	border-radius: 10px;
+	border: none;
+	cursor: pointer;
+}
+.column-buttons{
+	padding: 20px 0;
+	display: flex;
+	gap: 30px;
+}
+.row-buttons{
+	display: flex;
+	padding: 20px 0;
+	gap: 30px;
+}
+.upload-size-reference-image{
+	display: flex;
+	flex-direction: column;
+}
+.customization-reference-pdf{
+	display: flex;
+	flex-direction: column;
+	padding-bottom: 20px;
+}
+.upload-category-button{
+	height: 50px;
+	background-color: #FF3D22;
+	color: white;
+	cursor: pointer;
+	width: 40%;
+	border-radius: 10px;
+	border:none;
+	font-size: 16px;
+	align-self: center;
+}

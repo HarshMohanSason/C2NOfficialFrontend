@@ -32,6 +32,7 @@
 	border-radius: 10px;
 	font-size: 20px;
 	height: 40px;
+    padding-bottom: 5px;
 	padding-left: 10px;
 	outline: none;
 	border: 1px solid #E2E2E2;
@@ -42,6 +43,7 @@
 .sign-in-section input::placeholder{
 	color: #E2E2E2;
 	font-size: 12px;
+
 }
 .terms-and-conditions {
 	display: flex;

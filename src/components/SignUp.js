@@ -44,6 +44,7 @@ function SignUp() {
       //Sending the data to the backend server 
       const response = await fetch(process.env.REACT_APP_SIGN_UP_URL, {
         method: "POST",
+        credentials: "include",
         headers: {
           "Content-Type": "application/json",
         },

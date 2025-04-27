@@ -4,6 +4,7 @@
   background-color:#E2E2E2;
   height: 89px;
   padding: 0, 100px;
+  pointer-events: auto;
 }
 .header .left-menu-section nav ul {
   max-width: 622px;

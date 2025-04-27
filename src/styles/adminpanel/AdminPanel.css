@@ -1,0 +1,155 @@
+.admin-panel{
+  background-color: #F0F0F0;
+  min-height: 100vh;
+  display: flex;
+  gap: 100px;
+  justify-content: space-between;
+}
+.menu-section{
+  padding: 50px;
+  background-color: #FF3D22;
+  box-sizing: border-box;
+  width: 400px;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+.menu-section nav ul{
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.menu-section nav ul li button {
+  width: 100%;
+  background: none;
+  border: none;
+  color: #333;
+  font-size: 18px;
+  text-align: left;
+  padding: 12px 20px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: background 0.3s, color 0.3s, transform 0.2s;
+}
+
+.menu-section nav ul li button:hover {
+  background-color: #f0f0f0;
+  color: #000;
+  transform: scale(1.02);
+}
+
+.menu-section nav ul li button.active {
+  background-color: #f0f0f0; 
+  color: black;
+  font-weight: bold;
+}
+.content-section{
+  padding-top: 50px;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+/* PRODUCT MENU TAB CSS */
+.products-section{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  gap: 20px;
+}
+.products-section .search-bar{
+  width: 80%;
+  font-size: 18px;
+  padding-left: 35px;
+  height: 59px;
+  background-color: white;
+  border-radius: 40px;
+  outline: none;
+  border: 1px solid #E2E2E2;
+}
+.products-display-section{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.search-bar::placeholder {
+  color: #CACACA;
+}
+.products-display-section{
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+}
+.sort-box-wrapper{
+  padding-left: 10px;
+}
+.sort-box{
+  font-family: 'Inter';
+  font-size: 16px;
+  padding-left: 20px;
+  border-radius: 8px;
+  height: 46.6px;
+  width: 226.62px;
+  color: black;
+  outline: none;
+  background-color: #E2E2E2;
+  border: 1px solid #B9B9B9;
+}
+.product-grid{
+  width: 100%;
+  padding-left: 10px;
+}
+.product-grid th{
+  padding-right: 30px;
+  font-size: 18px;
+  text-align: left;
+}
+#upload-product-button{
+  top: 80%;
+  left: 75%;
+  position: absolute;
+  font-size: 17.72px;
+  background-color: #FF3D22;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  max-width: 154.3px;
+  width: 100%;
+  height: 60px;
+  cursor: pointer;
+}
+.add-category-popup{
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  border-radius: 10px;
+  gap: 20px;
+  width: 90%;
+  background-color: white;
+  padding: 50px;
+}
+/*
+.product-grid table {
+  width: 100%;
+  border-collapse: collapse;
+  overflow: hidden;
+}
+
+
+#upload-product-button{
+  top: 80%;
+  left: 75%;
+  position: absolute;
+  font-size: 17.72px;
+  background-color: #FF3D22;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  max-width: 154.3px;
+  width: 100%;
+  height: 60px;
+}
+*/

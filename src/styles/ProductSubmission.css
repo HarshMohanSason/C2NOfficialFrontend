@@ -1,0 +1,9 @@
+
+.product-submission-loading-outer-bar{
+	width: 50%;
+	background-color: grey;
+}
+
+.product-submission-loading-outer-bar .inner-bar{
+	color: white;
+}

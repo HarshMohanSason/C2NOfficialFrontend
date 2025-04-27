@@ -1,11 +1,20 @@
-import React from 'react';
+import {React, useEffect, useState} from 'react';
 import '../styles/Header.css'; 
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
 import DropDownMenu from './DropDownMenu.js';
 
-function Header() {
+function Header({isLoggedIn}) {
+  const [accountURL, setAccountUrl] = useState('/signIn') //By default take to the login page 
+  useEffect(() => {
+    if(isLoggedIn){
+      setAccountUrl('/adminPanel')
+    }
+    else{
+      setAccountUrl('/signIn')
+    }
+  })
   return (
       <header className="header">
         <section className="left-menu-section">
@@ -29,7 +38,7 @@ function Header() {
             <ul>
               <li><Link to="">Search</Link></li>
               <li><Link to="/">Cart</Link></li>
-              <li><Link to="/signIn">Account</Link></li>
+              <li><Link to={accountURL}>Account</Link></li>
             </ul>
           </nav>
         </section>
