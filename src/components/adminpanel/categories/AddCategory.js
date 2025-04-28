@@ -141,7 +141,7 @@ function AddCategory(){
 					</section>
 					<section className="upload-size-reference-image">
 						<label>Add a how to measure image</label>
-						<input type="file" name="how_to_measure_image" onChange={(e)=> updateCategoryData(e.target.name, e.target.files[0])}/>
+						<input type="file" accept="image/*" name="how_to_measure_image" onChange={(e)=> updateCategoryData(e.target.name, e.target.files[0])} />
 					</section>
 					<section className="customization-reference-pdf">
 						<label>Add a customization reference (pdf only)</label>

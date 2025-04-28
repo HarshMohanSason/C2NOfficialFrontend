@@ -56,7 +56,7 @@ function Categories(){
 		<section>
 		    <Link to="/addCategory">
                 {" "}
-                <button id="upload-product-button">ADD A CATEGORY</button>
+                <button className="add-a-category-button">ADD A CATEGORY</button>
             </Link>
         </section>
     );

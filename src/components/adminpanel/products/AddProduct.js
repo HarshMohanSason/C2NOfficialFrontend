@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React, { useState,  useEffect, useRef } from "react";
 import "../../../styles/adminpanel/products/AddProduct.css";
 import ReactQuill from "react-quill";
 import "react-quill/dist/quill.snow.css";
@@ -12,13 +12,17 @@ function AddProduct() {
 
   const [thumbnail, setThumbnail] = useState(null);
   const [activeTab, setActiveTab] = useState("Price");
+  const [categoriesSummary, setCategoriesSummary] = useState([{
+    id: "1", 
+    name: "",
+  }])
   const [productData, setProductData] = useState({
     name: "",
+    category_id: "1",
     thumbnail_image: "",
     carousel_images: Array(8).fill(null),
     amount_sold: "",
     inventory: "",
-    category: "",
     long_description: "",
     short_description: "",
     price: "",
@@ -32,20 +36,45 @@ function AddProduct() {
     height: "",
   });
 
+  {/* Fetch the categories summary to populate the select category option*/}
+  useEffect(() => {
+    // Function to fetch data
+    const fetchCategoriesSummary = async () => {
+      try {
+        const response = await fetch(process.env.REACT_APP_GET_ALL_CATEGORY_SUMMARY, {
+          method: "GET",
+          credentials: "include", 
+        });
+        if (!response.ok) {
+            throw new Error('Failed to fetch data');
+        }
+        const data = await response.json();
+        setCategoriesSummary(data);
+      } catch (error) {
+            CustomAlert({
+              title: "Oops!",
+              text: error.message,
+          });
+      } 
+    };
+    fetchCategoriesSummary(); 
+  }, []); 
+
   const updateProductData = (name, value) => {
     setProductData((prev) => ({
       ...prev,
       [name]: value,
     }));
+    console.log(productData)
   };
-
+  
   const createProductFormData = () => {
     const formData = new FormData();
 
     formData.append("name", productData.name);
     formData.append("amount_sold", parseInt(productData.amount_sold, 10)); // Make sure it's an integer
     formData.append("inventory", parseInt(productData.inventory, 10)); // Make sure it's an integer
-    formData.append("category", productData.category);
+    formData.append("category_id", productData.category_id);
     formData.append("long_description", productData.long_description);
     formData.append("short_description", productData.short_description);
     formData.append("price", parseInt(productData.price)); // Ensure price is a float
@@ -111,7 +140,15 @@ function AddProduct() {
               required
             />
           </section>
-
+          <section className="select-a-category">
+            <label>Select a Category</label>
+            <select name="category_id" onChange={(e) => updateProductData(e.target.name,e.target.value)}>
+              {categoriesSummary.map((category, index) => (
+                <option key={index} value={category.id}>{category.name}</option>
+                ))
+              }
+            </select>
+          </section>
           <section className="product-long-description-section">
             <label>Product Long Description</label>
             <ReactQuill

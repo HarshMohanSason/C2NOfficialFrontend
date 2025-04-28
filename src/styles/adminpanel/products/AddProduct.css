@@ -231,3 +231,17 @@
   outline: none;
   border-radius: 5px;
 }
+.select-a-category{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.select-a-category select{
+  width: 30%; 
+  padding: 10px;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  font-size: 17px;
+}
+
