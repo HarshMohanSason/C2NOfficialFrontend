@@ -16,11 +16,12 @@ import CookiesPopup from "../utilities/CookiesPopup.js";
 import InitialLoadingScreen from './InitialLoadingScreen.js'
 
 function Home() {
-  //Always assuming that user is not logged in 
+  //Default state as logged out
   const [isLoggedIn, setIsLogInInfo] = useState(false) 
   useEffect(() => {
     const checkLoginStatus = async () => {
       try{
+        console.log(process.env.REACT_APP_RETURN_USER)
         const response = await fetch(process.env.REACT_APP_RETURN_USER, {
           method: 'GET',
           credentials: 'include', //include the cookies
@@ -28,15 +29,14 @@ function Home() {
             "Content-Type": "application/json",
           },
         })
+
         if (response.ok) {
           setIsLogInInfo(true)
         }else{
-
           setIsLogInInfo(false)
         }
       }
       catch (err){
-        console.log(err)
         setIsLogInInfo(false)
       }
     }
