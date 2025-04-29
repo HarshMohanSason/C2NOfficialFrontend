@@ -65,7 +65,6 @@ function AddProduct() {
       ...prev,
       [name]: value,
     }));
-    console.log(productData)
   };
   
   const createProductFormData = () => {
@@ -103,6 +102,7 @@ function AddProduct() {
   //Submit the productData
   async function submitData(event) {
     event.preventDefault();
+    console.log(process.env.REACT_APP_SUBMIT_PRODUCT_DATA)
     try {
       const productData = createProductFormData();
       const response = await fetch(process.env.REACT_APP_SUBMIT_PRODUCT_DATA, {

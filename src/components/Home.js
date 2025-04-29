@@ -21,7 +21,6 @@ function Home() {
   useEffect(() => {
     const checkLoginStatus = async () => {
       try{
-        console.log(process.env.REACT_APP_RETURN_USER)
         const response = await fetch(process.env.REACT_APP_RETURN_USER, {
           method: 'GET',
           credentials: 'include', //include the cookies
@@ -29,7 +28,6 @@ function Home() {
             "Content-Type": "application/json",
           },
         })
-
         if (response.ok) {
           setIsLogInInfo(true)
         }else{
