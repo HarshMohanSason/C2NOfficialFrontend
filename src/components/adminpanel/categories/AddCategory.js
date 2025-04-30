@@ -95,13 +95,12 @@ function AddCategory(){
 	      text: "Successfully added the category",
 	      confirmButtonColor: "#81c784",
 	    });
-	    
+
 	  } catch (error) {
 	    CustomAlert({
 	      title: "Oops!",
 	      text: error.message,
 	    });
-	    return;
 	  } finally {
 	    setIsUploading(false);
 	  }
