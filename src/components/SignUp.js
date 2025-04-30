@@ -42,7 +42,7 @@ function SignUp() {
         return;
       }
       //Sending the data to the backend server 
-      const response = await fetch(process.env.REACT_APP_SIGN_UP_URL, {
+      const response = await fetch(process.env.REACT_APP_EMAIL_SIGN_UP_URL, {
         method: "POST",
         credentials: "include",
         headers: {
@@ -147,7 +147,7 @@ function SignUp() {
 
       <section className="img-section">
         <figure>
-          <img src={SignUpPageImage}></img>
+          <img src={SignUpPageImage} alt="sign up"></img>
         </figure>
       </section>
     </div>

@@ -1,5 +1,5 @@
 import React from 'react';
-import '../styles/utilities/TopBanner.css'
+import '../styles/TopBanner.css'
 
 function TopBanner() {
     return(

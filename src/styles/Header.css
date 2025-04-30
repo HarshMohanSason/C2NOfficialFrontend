@@ -5,6 +5,7 @@
   height: 89px;
   padding: 0, 100px;
   pointer-events: auto;
+  border-bottom: 6px solid black;
 }
 .header .left-menu-section nav ul {
   max-width: 622px;

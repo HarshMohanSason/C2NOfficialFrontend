@@ -1,5 +1,5 @@
 import React from 'react'; 
-import '../styles/CookiesPopup.css';
+import '../styles/utilities/CookiesPopup.css';
 
 function CookiesPopup (){
 	return (

@@ -1,9 +1,10 @@
 import React, {useState, useRef} from 'react'; 
 import '../../../styles/adminpanel/categories/AddCategory.css';
 import { CustomAlert } from "../../../utilities/CustomAlert.js";
+import LoadingScreen from "../../../utilities/LoadingScreen.js";
 
 function AddCategory(){
-
+	const [isUploading, setIsUploading] = useState(null)
 	const [categoryData, setCategoryData] = useState({
 		name: "", 
 		size_chart: "",
@@ -19,7 +20,7 @@ function AddCategory(){
   		setTableData(prev => [...prev, Array(prev[0].length).fill("")]);
   	}
   	const removeRow = () =>{
-  		if (tableData.length == 1){
+  		if (tableData.length === 1){
   			CustomAlert({
         		title: "Oops!",
         		text: "Need to have at least one row",
@@ -33,7 +34,7 @@ function AddCategory(){
     	setTableData(prev => prev.map(row => [...row, ""]));
   	};
   	const removeColumn = () => {
-  		if (tableData[0].length == 1){
+  		if (tableData[0].length === 1){
   			CustomAlert({
         		title: "Oops!",
         		text: "Need to have at least one column",
@@ -71,31 +72,44 @@ function AddCategory(){
 
 		return formData;
 	}
-	const uploadCategory = async(event) =>{
-		event.preventDefault();
-		try{
-			const categoryData = createCategoryFormData()
-			const response = await fetch(process.env.REACT_APP_SUBMIT_CATEGORY_DATA, {
-				method: "POST",
-				credentials: "include",
-				body: categoryData,
-			})
-			const result = await response.text();
-      		if (!response.ok) {
-        		throw new Error(result);
-     		 }
-		}
-		catch(error){
-			console.log(error)
-			CustomAlert({
-        		title: "Oops!",
-        		text: error.message,
-      		});
-		}
-	}
+	const uploadCategory = async (event) => {
+	  event.preventDefault();
+	  setIsUploading(true);
+	
+	  try {
+	    const categoryData = createCategoryFormData();
+	    const response = await fetch(process.env.REACT_APP_SUBMIT_CATEGORY_DATA, {
+	      method: "POST",
+	      credentials: "include",
+	      body: categoryData,
+	    });
+	    const result = await response.text();
+	
+	    if (!response.ok) {
+	      throw new Error(result);
+	    }
+	
+	    CustomAlert({
+	      title: "Success",
+	      icon: "success",
+	      text: "Successfully added the category",
+	      confirmButtonColor: "#81c784",
+	    });
+	    
+	  } catch (error) {
+	    CustomAlert({
+	      title: "Oops!",
+	      text: error.message,
+	    });
+	    return;
+	  } finally {
+	    setIsUploading(false);
+	  }
+	};
 
 	return (
 		<section className="add-category-page">
+			{isUploading && <LoadingScreen text="Uploading Category..." />}
 			<form method="post" onSubmit={uploadCategory}>
 				<section className="add-category-section">
 					<h1>ADD CATEGORY</h1>

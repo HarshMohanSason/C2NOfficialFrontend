@@ -1,4 +1,4 @@
-import React, { useState,  useEffect, useRef } from "react";
+import React, { useState, useEffect } from "react";
 import "../../../styles/adminpanel/products/AddProduct.css";
 import ReactQuill from "react-quill";
 import "react-quill/dist/quill.snow.css";
@@ -7,11 +7,11 @@ import MultiImageUploader from "../../../utilities/MultiImageUploader.js";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTrashCan } from "@fortawesome/free-solid-svg-icons";
 import { CustomAlert } from "../../../utilities/CustomAlert.js";
+import LoadingScreen from "../../../utilities/LoadingScreen.js";
 
 function AddProduct() {
-
+  const [isUploading, setIsUploading] = useState(null)
   const [thumbnail, setThumbnail] = useState(null);
-  const [activeTab, setActiveTab] = useState("Price");
   const [categoriesSummary, setCategoriesSummary] = useState([{
     id: "1", 
     name: "",
@@ -36,7 +36,6 @@ function AddProduct() {
     height: "",
   });
 
-  {/* Fetch the categories summary to populate the select category option*/}
   useEffect(() => {
     // Function to fetch data
     const fetchCategoriesSummary = async () => {
@@ -102,7 +101,8 @@ function AddProduct() {
   //Submit the productData
   async function submitData(event) {
     event.preventDefault();
-    console.log(process.env.REACT_APP_SUBMIT_PRODUCT_DATA)
+    setIsUploading(true)
+
     try {
       const productData = createProductFormData();
       const response = await fetch(process.env.REACT_APP_SUBMIT_PRODUCT_DATA, {
@@ -114,17 +114,25 @@ function AddProduct() {
       if (!response.ok) {
         throw new Error(result);
       }
+      CustomAlert({
+        title: "Success",
+        icon: "success",
+        text: "Successfully added the category",
+        confirmButtonColor: "#81c784",
+      });
     } catch (error) {
       CustomAlert({
         title: "Oops!",
         text: error.message,
       });
-      return;
+    }finally{
+      setIsUploading(false)
     }
   }
 
   return (
     <section className="add-product-page">
+      {isUploading && <LoadingScreen text="Uploading Product..." />}
       <form onSubmit={submitData} method="post">
         <section className="add-product-section">
           <h1>Add Product</h1>

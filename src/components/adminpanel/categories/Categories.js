@@ -43,7 +43,6 @@ function Categories(){
       		if (!response.ok) {
       		  throw new Error(result);
       		}
-      		console.log("submitted")
 		}catch(error){
 			CustomAlert({
         		title: "Oops!",

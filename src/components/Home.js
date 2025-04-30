@@ -13,7 +13,7 @@ import seventhSectionImage from "../assets/images/seventh_section_image.jpg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import CookiesPopup from "../utilities/CookiesPopup.js";
-import InitialLoadingScreen from './InitialLoadingScreen.js'
+import InitialCurtainAnimation from './InitialCurtainAnimation.js'
 
 function Home() {
   //Default state as logged out
@@ -43,7 +43,7 @@ function Home() {
 
   return (
     <>
-      <InitialLoadingScreen />
+      <InitialCurtainAnimation />
       <TopBanner />
       <Header isLoggedIn={isLoggedIn}/>
       <main>

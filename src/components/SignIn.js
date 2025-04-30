@@ -1,5 +1,4 @@
 import {React, useState} from 'react';
-import SignUp from './SignUp.js';
 import { Link } from "react-router-dom";
 import ContinueWithGoogleButton  from "./ContinueWithGoogleButton.js";
 import SignInPageImage from "../assets/images/sign_in_page_image.jpg";
@@ -25,7 +24,7 @@ function SignIn(){
   async function submitSignUpWithEmailForm(event) {
     event.preventDefault();
     try{
-      const response = await fetch(process.env.REACT_APP_SIGN_IN_URL, {
+      const response = await fetch(process.env.REACT_APP_EMAIL_SIGN_IN_URL, {
           method: "POST",
           credentials: "include", 
           headers: {
@@ -91,7 +90,7 @@ function SignIn(){
               name="password"
               value={formData.password}
               onChange={handleFormData}
-              placeholder="Create a strong password"
+              placeholder="Enter your password"
               required
             />
             <button id="sign-in-button" type="submit">
@@ -101,7 +100,7 @@ function SignIn(){
         </form>
 
         <div className="or-divider">Or</div>
-        <ContinueWithGoogleButton isSignUp={false} /> 
+        <ContinueWithGoogleButton/> 
         <h4>Don’t have an account?{" "}
           <Link to="/signUp"style={{ textDecoration: "none", color: "#FF3D22" }}>
             Sign Up
@@ -111,7 +110,7 @@ function SignIn(){
 
       <section className="img-section">
         <figure>
-          <img src={SignInPageImage}></img>
+          <img src={SignInPageImage} alt="SignIn"></img>
         </figure>
       </section>
     </div>
