@@ -1,6 +1,6 @@
 import React, {useState}from 'react';
 import '../../../styles/adminpanel/categories/Categories.css'; 
-import { CustomAlert } from "../../../utilities/CustomAlert.js";
+import { CustomAlert } from "../../utilities/CustomAlert.js";
 import { AddCategory } from "./AddCategory";
 import { Link } from "react-router-dom";
 

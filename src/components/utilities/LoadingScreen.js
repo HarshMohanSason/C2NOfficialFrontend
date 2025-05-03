@@ -1,5 +1,5 @@
 import React from 'react';
-import '../styles/utilities/LoadingScreen.css';
+import '../../styles/utilities/LoadingScreen.css';
 
 function LoadingScreen({ text = "Loading..." }) {
   return (

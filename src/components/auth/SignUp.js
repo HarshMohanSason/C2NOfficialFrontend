@@ -1,9 +1,9 @@
 import { React, useState } from "react";
-import SignUpPageImage from "../assets/images/sign_up_page_image.png";
-import "../styles/SignUp.css";
+import SignUpPageImage from "../../assets/images/sign_up_page_image.png";
+import "../../styles/auth/SignUp.css";
 import { Link } from "react-router-dom";
-import ContinueWithGoogleButton from "./ContinueWithGoogleButton.js";
-import {CustomAlert} from "../utilities/CustomAlert.js";
+import ContinueWithGoogleButton from "./ContinueWithGoogleButton";
+import {CustomAlert} from "../utilities/CustomAlert";
 import {useNavigate} from 'react-router-dom';
 
 function SignUp() {

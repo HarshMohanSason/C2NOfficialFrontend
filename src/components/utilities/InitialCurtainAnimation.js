@@ -1,5 +1,5 @@
 import { React, useState, useEffect } from "react";
-import "../styles/InitialCurtainAnimation.css";
+import "../../styles/utilities/InitialCurtainAnimation.css";
 
 const InitialLoadingScreen = () => {
   const [animate, setAnimate] = useState(false);

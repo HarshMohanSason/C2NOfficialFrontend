@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from "react";
-import "../../../styles/adminpanel/products/AddProduct.css";
+import "../../../../styles/adminpanel/products/AddProduct.css";
 import { CustomAlert } from "../../../utilities/CustomAlert.js";
 import LoadingScreen from "../../../utilities/LoadingScreen.js";
 import ProductNameSection from "./ProductNameSection.js";
 import SelectCategorySection from "./SelectCategorySection.js";
 import LongDescriptionSection from "./LongDescriptionSection.js";
 import ShortDescriptionSection from "./ShortDescriptionSection.js";
-import ThumbnailUploaderSection from "./ThumbnailUploaderSection";
-import CarouselUploaderSection from "./CarouselUploaderSection";
+import ThumbnailUploaderSection from "./ThumbnailUploaderSection.js";
+import CarouselUploaderSection from "./CarouselUploaderSection.js";
 import SlugInputSection from "./SlugInputSection.js";
 import PricingSection from "./PricingSection.js";
 import InventorySection from "./InventorySection.js";

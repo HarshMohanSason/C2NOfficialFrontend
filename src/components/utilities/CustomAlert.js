@@ -1,5 +1,5 @@
 import Swal from 'sweetalert2';
-import "../styles/utilities/CustomAlert.css";
+import "../../styles/utilities/CustomAlert.css";
 
 export const CustomAlert = ({
   title,

@@ -1,7 +1,7 @@
 import {React, useEffect, useState } from "react";
-import Header from "./Header.js";
-import Footer from "./Footer.js";
-import TopBanner from "./TopBanner.js";
+import Header from "./Header";
+import Footer from "./Footer";
+import TopBanner from "./utilities/TopBanner";
 import "../styles/Home.css";
 import firstSectionImage from "../assets/images/first_section_image.png";
 import secondSectionImage1 from "../assets/images/second_section_image1.jpg";
@@ -12,8 +12,8 @@ import sixthSectionImage from "../assets/images/sixth_section_image.jpg";
 import seventhSectionImage from "../assets/images/seventh_section_image.jpg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
-import CookiesPopup from "../utilities/CookiesPopup.js";
-import InitialCurtainAnimation from './InitialCurtainAnimation.js'
+import CookiesPopup from "./utilities/CookiesPopup";
+import InitialCurtainAnimation from './utilities/InitialCurtainAnimation'
 
 function Home() {
   //Default state as logged out

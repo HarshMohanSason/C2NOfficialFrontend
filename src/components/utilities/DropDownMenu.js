@@ -1,5 +1,5 @@
 import React from 'react'; 
-import '../styles/DropDownMenu.css'; 
+import '../../styles/utilities/DropDownMenu.css'; 
 
 function DropDownMenu(){
 	return(

@@ -1,10 +1,10 @@
 import React from "react";
 import { useGoogleLogin } from "@react-oauth/google";
 import { useNavigate } from 'react-router-dom';
-import { CustomAlert} from '../utilities/CustomAlert.js'
+import { CustomAlert} from '../utilities/CustomAlert'
 
 const ContinueWithGoogleButton = () => {
-  const navigate = useNavigate(); //To automatically navigate to the homepaeg if the user is logged in 
+  const navigate = useNavigate(); 
   const login = useGoogleLogin({
     onSuccess: async (tokenResponse) => {
       try {

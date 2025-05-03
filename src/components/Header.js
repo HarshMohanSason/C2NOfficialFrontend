@@ -3,7 +3,7 @@ import '../styles/Header.css';
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
-import DropDownMenu from './DropDownMenu.js';
+import DropDownMenu from './utilities/DropDownMenu';
 
 function Header({isLoggedIn}) {
   const [accountURL, setAccountUrl] = useState('/signIn') //By default take to the login page 

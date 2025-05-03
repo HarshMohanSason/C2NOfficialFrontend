@@ -1,8 +1,8 @@
 import {React, useState} from 'react';
 import { Link } from "react-router-dom";
 import ContinueWithGoogleButton  from "./ContinueWithGoogleButton.js";
-import SignInPageImage from "../assets/images/sign_in_page_image.jpg";
-import '../styles/SignIn.css'
+import SignInPageImage from "../../assets/images/sign_in_page_image.jpg";
+import '../../styles/auth/SignIn.css'
 import {CustomAlert} from "../utilities/CustomAlert.js";
 import {useNavigate} from 'react-router-dom';
 
